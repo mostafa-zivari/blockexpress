@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /*scroll-behavior: smooth;*/
+}
+
+section.full-height{
+    height: 100vh;
+}
+
+section#section0{
+     background-color: #cdcdcd;
+ }
+
+section#section1{
+    background-color: blue;
+}
