@@ -1,3 +1,40 @@
+body.night {
+    background-color: #5d5d5d;
+}
+
 body.night div#section0 div.poster{
-    background-color: #00151f;
+    background-color: #343434;
+}
+
+body.night div.menu {
+    background-color: #343434;
+}
+
+body.night div.menu ul li a{
+    background: #4f4f4f;
+    color: #ffffff;
+}
+
+body.night div#section0 div.slider{
+    background-color: #343434;
+}
+
+body.night div#section0 div.slider div.card img{
+    filter: brightness(80%);
+}
+
+body.night div#section0 div.slider div.card a h3{
+    background: #464646d9;
+    color: #dadada;
+}
+
+body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot span{
+
+    background: #869791;
+
+}
+
+body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot.active span,body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot:hover span{
+    background: #dcdcdc;
+
 }
