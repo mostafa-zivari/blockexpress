@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>بلاک اکسپرس | پایگاه خبری تحلیلی فناوری بلاک چین</title>
     <link href="darkStyles.css" rel="stylesheet">
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
@@ -16,7 +16,32 @@
 
 
 <body>
+
+<div class="dots">
+    <span class="dot activePage" data-toggle="tooltip" data-placement="left" title="خانه"></span>
+    <span class="dot" data-toggle="tooltip" data-placement="left" title="اخبار"></span>
+    <span class="dot" data-toggle="tooltip" data-placement="left" title="آموزش"></span>
+</div>
+
 <div class="container">
+    <div class="menu sticky topMenu hideMenu">
+        <div class="row">
+            <div class="col-sm-10">
+                <nav>
+                    <ul>
+                        <li class="activeLink"><a onclick="setNewRow(0);"><img src="icon-home.png">خانه</a></li>
+                        <li><a onclick="setNewRow(1);"><img src="icon-news.png" alt="">اخبار</a></li>
+                        <li><a onclick="setNewRow(2);"><img src="icon-education.png" alt="">آموزشی</a></li>
+                        <li><a href="#"><img src="icon-multimedia.png" alt="">چند رسانه ای</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="toggle"></div>
+            </div>
+        </div>
+    </div>
 
     <div class="full-height" id="section0">
         <div class="poster">
@@ -27,66 +52,343 @@
 
             </div>
         </div>
-        <div class="menu">
+        <div class="menu sticky bottomMenu">
             <div class="row">
                 <div class="col-sm-10">
                     <nav>
                         <ul>
-                            <li><a href="#">خانه</a></li>
-                            <li><a href="#">اخبار</a></li>
-                            <li><a href="#">چند رسانه ای</a></li>
-                            <li><a href="#">آموزشی</a></li>
+                            <li class="activeLink"><a onclick="setNewRow(0);"><img src="icon-home.png">خانه</a></li>
+                            <li><a onclick="setNewRow(1);"><img src="icon-news.png" alt="">اخبار</a></li>
+                            <li><a onclick="setNewRow(2);"><img src="icon-education.png" alt="">آموزشی</a></li>
+                            <li><a href="#"><img src="icon-multimedia.png" alt="">چند رسانه ای</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-sm-2">
                     <div class="toggle"></div>
+
                 </div>
             </div>
         </div>
+
 
         <div class="slider owl-carousel owl-theme">
             <div class="item">
                 <div class="card">
                     <img src="img2.jpg">
-                    <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h3></a>
+                    <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                        گرافیک است.</h3></a>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
                     <img src="img3.jpg">
-                    <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h3></a>
+                    <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                        گرافیک است.</h3></a>
                 </div>
             </div>
 
             <div class="item">
                 <div class="card">
                     <img src="img4.jpg">
-                    <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h3></a>
+                    <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                        گرافیک است.</h3></a>
                 </div>
             </div>
 
         </div>
 
-        <div class="table" style="height: 43vh; background-color: green">
+        <div class="table">
 
         </div>
 
     </div>
 
 
+    <div class="full-height" id="section1">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="card">
+                            <img src="img8.jpg">
+                            <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                طراحان گرافیک است.</h3></a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="card">
+                            <img src="img9.jpg">
+                            <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                طراحان گرافیک است.</h3></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="img10.jpg">
+                            <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                طراحان گرافیک است.</h3></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="img11.jpg">
+                            <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                طراحان گرافیک است.</h3></a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="card">
+                            <img src="img12.jpg">
+                            <a href="#"><h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                طراحان گرافیک است.</h3></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="latestNewsContainer">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img8.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img9.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img10.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img11.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img12.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img13.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img4.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="latestNews">
+                        <img src="img5.jpg" alt="">
+                        <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<section class="full-height" id="section1">
-    <h1>bye</h1>
-    <p>Deus messiss, tanquam velox fides.Suffering doesn’t wisely reject any power — but the therapist is what
-        travels.</p>
-</section>
+    <div class="full-height" id="section2">
+        <div class="tutorials">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="tutorial beginners">
+                        <h2>مطالب آموزشی برای مبتدیان</h2>
+                        <ul>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tutorial intermediate">
+                        <h2>مطالب آموزشی سطح متوسط</h2>
+                        <ul>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tutorial advanced">
+                        <h2>مطالب آموزشی حرفه ای</h2>
+                        <ul>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                            <li><a href="#">می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                                به پایان رسد.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="currencies">
+            <div class="row">
+                <h2>معرفی رمز ارز ها</h2>
+            </div>
+
+            <div class="row individualCurrency">
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="bitcoin0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">بیت کوین</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ethereum0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">اتریوم</a>
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ripple0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">ریپل</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="bitcoin0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">بیت کوین</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ethereum0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">اتریوم</a>
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ripple0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">ریپل</a>
+                    </div>
+                </div><div class="col-md-2">
+                <div class="currency">
+                    <a href="#">
+                        <img src="bitcoin0.png" alt="" class="blackAndWhite">
+                    </a>
+                    <a href="#" class="nameOfCurrency">بیت کوین</a>
+                </div>
+            </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ethereum0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">اتریوم</a>
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ripple0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">ریپل</a>
+                    </div>
+                </div><div class="col-md-2">
+                <div class="currency">
+                    <a href="#">
+                        <img src="bitcoin0.png" alt="" class="blackAndWhite">
+                    </a>
+                    <a href="#" class="nameOfCurrency">بیت کوین</a>
+                </div>
+            </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ethereum0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">اتریوم</a>
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="currency">
+                        <a href="#">
+                            <img src="ripple0.png" alt="" class="blackAndWhite">
+                        </a>
+                        <a href="#" class="nameOfCurrency">ریپل</a>
+                    </div>
+                </div>
 
 
-<section class="full-height" id="section2">
-    <h1>hi</h1>
-</section>
+            </div>
+        </div>
+    </div>
+
 
 </div>
 

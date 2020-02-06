@@ -1,15 +1,58 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: IRKoodak;
+    font-family: IRANSans , IRKoodak;
     direction: rtl;
     text-align: right;
     color: black;
 }
 
+body{
+    transition: 0.5s;
+    background-color: #f5f5f587;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
 
 html {
     /*scroll-behavior: smooth;*/
+}
+
+div.dots {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+div.dots .dot {
+    height: 9px;
+    width: 9px;
+    background-color: #c0dcec;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 7px auto;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+div.dots .dot:hover{
+    background-color: #3cb1f6;
+    height: 13px;
+    width: 13px;
+}
+
+div.dots .activePage{
+    background-color: #3cb1f6;
+    transition: 0.3s;
+    height: 13px;
+    width: 13px;
 }
 
 
@@ -25,9 +68,11 @@ div#section0{
 
 
 div#section0 div.poster{
-    background-color: #f5f5f5;
+    background-color: #fafafa;
     transition: 0.5s;
     position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0 1px #afafaf;
 }
 div#section0 div.poster div.row , div#section0 div.poster div.row div.col-sm-12{
     height: 100%;
@@ -42,6 +87,7 @@ div#section0 div.poster img{
     width: 100%;
     height: 100%;
 }
+
 
 
 
@@ -64,8 +110,7 @@ div#section0 div.poster img{
     background: #00151f;
     border: 2px solid #fff;
 }
-.toggle:before
-{
+.toggle:before {
     content: '';
     position: absolute;
     top: 2px;
@@ -89,6 +134,12 @@ div.menu{
     padding: 5px 5px;
     transition: 0.5s;
     z-index: 2;
+    border-radius: 3px;
+    box-shadow: 0 0 1px #afafaf;
+}
+
+div.menu.hideMenu {
+    display: none;
 }
 
 .sticky {
@@ -103,11 +154,11 @@ div.menu div.row , div.menu nav , div.menu nav ul , div.menu nav ul li, div.menu
 
 
 div.menu ul {
-
     list-style: none;
     width: 100%;
     margin: 0;
 }
+
 
 div.menu ul li {
     float: right;
@@ -118,15 +169,16 @@ div.menu ul li {
 }
 
 div.menu ul li a{
-    padding: 5px 25px;
+    padding: 4px 21px;
     margin-right: 5px;
     text-align: center;
     font-size: 13px;
     text-decoration: none;
     color: #000;
+    cursor: pointer;
     font-weight: normal;
     outline: none;
-    background: #eaeaea;
+    background: #d2d2d2;
     color: #000000;
     opacity: .7;
     display: table-cell;
@@ -143,9 +195,22 @@ div.menu ul li a{
 }
 
 
+div.menu ul li a img{
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    vertical-align: -3px;
+}
+
 
 div.menu ul li:hover a {
     background: #ffffff;
+}
+
+div.menu ul li.activeLink a{
+    background: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 
@@ -154,10 +219,11 @@ div.menu ul li:hover a {
 div#section0 div.slider{
     height: fit-content;
     margin-top: 5px;
-    background: #efefef;
+    background: #fafafa;
     padding: 5px 5px 0 5px;
     transition: 0.5s;
-
+    border-radius: 3px;
+    box-shadow: 0 0 1px #afafaf;
 
 }
 
@@ -179,17 +245,24 @@ div#section0 div.slider.owl-theme .owl-dots .owl-dot.active span,div#section0 di
 
 div#section0 div.slider div.card{
     height: 260px;
-    background-color: #fcfeff;
+    background-color: transparent;;
     border-radius: 0px;
     position: relative;
     border: none;
+    transition: 0.5s;
 }
+
+div#section0 div.slider div.card:hover img{
+    filter: brightness(75%);
+}
+
 
 div#section0 div.slider div.card img{
     width: 100%;
     height: 260px;
     filter: brightness(100%);
     transition: 0.5s;
+    border-radius: 3px;
 
 }
 
@@ -197,6 +270,7 @@ div#section0 div.slider div.card a h3{
     font-size: 14px;
     text-align: center;
     /* margin-top: 10px; */
+    font-weight: bold;
     position: absolute;
     color: #0a0a0a;
     right: 50%;
@@ -211,9 +285,293 @@ div#section0 div.slider div.card a h3{
 
 }
 
-section#section1{
-    background-color: blue;
+
+
+/* section 1 styles */
+
+div#section1{
+
 }
+
+div#section1 div.slider{
+    height: fit-content;
+    margin-top: 5px;
+    background: #fafafa;
+    padding: 5px 5px 0 5px;
+    transition: 0.5s;
+    border-radius: 3px;
+    box-shadow: 0 0 1px #afafaf;
+
+}
+
+div#section1 div.slider div.owl-dots button ,div#section1 div.slider div.owl-dots button span:focus{
+    outline: none;
+}
+
+div#section1 div.slider.owl-theme .owl-dots .owl-dot span{
+    background: #c0dcec;
+    transition: 0.5s;
+}
+
+div#section1 div.slider.owl-theme .owl-dots .owl-dot.active span,div#section1 div.slider.owl-theme .owl-dots .owl-dot:hover span{
+    background: #3cb1f6;
+    transition: 0.5s;
+}
+
+div#section1 div.slider div.card{
+    height: 200px;
+    background-color: transparent;;
+    border-radius: 0px;
+    position: relative;
+    border: none;
+    transition: 0.3s;
+}
+div#section1 div.slider div.card:hover {
+    transform: scale(1.015);
+}
+
+div#section1 div.slider div.card:hover h3{
+    color: #000000;
+}
+
+div#section1 div.slider div.card:hover img{
+    filter: brightness(75%);
+}
+
+div#section1 div.slider div.card img{
+    width: 100%;
+    height: 200px;
+    filter: brightness(100%);
+    transition: 0.5s;
+    border-radius: 3px;
+}
+
+div#section1 div.slider div.card a h3{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    /* margin-top: 10px; */
+    position: absolute;
+    font-weight: bold;
+    color: #474747;
+    right: 50%;
+    display: inline-block;
+    border-radius: 3px;
+    bottom: 0px;
+    transform: translate(+50%, 0);
+    background: #ffffffc4;
+    padding: 7px 5px;
+    width: 90%;
+    transition: 0.5s;
+
+}
+
+div#section1 div.latestNewsContainer {
+    background: #fafafa;
+    box-shadow: 0 0 1px #afafaf;
+    margin: 15px 0 10px 0;
+    padding: 10px 10px 0 10px;
+    border-radius: 3px;
+    transition: 0.5s;
+
+}
+
+
+div#section1 div.latestNews{
+    background-color: #fafafa;
+    height: 200px;
+    border-radius: 3px;
+    padding: 3px;
+    box-shadow: 0 0 3px #afafaf;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: 0.5s;
+
+}
+
+div#section1 div.latestNews:hover {
+    box-shadow: 0 0 8px #afafaf;
+}
+div#section1 div.latestNews:hover img{
+    filter: brightness(70%);
+}
+
+div#section1 div.latestNews img{
+    width: 98%;
+    height: 130px;
+    display: block;
+    margin: 0 auto 5px auto;
+    transition: 0.5s;
+
+}
+
+div#section1 div.latestNews a{
+    color: #004160;
+    font-size: 11px;
+    transition: 0.3s;
+
+}
+
+div#section1 div.latestNews a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+
+/*section 2 */
+
+div#section2 div.tutorials {
+    background-color: #fafafa;
+    padding: 10px;
+    box-shadow: 0 0 1px #afafaf;
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+
+div#section2 div.tutorials div.tutorial{
+    border-radius: 3px;
+    border-bottom: none;
+    height: 100%;
+}
+
+div#section2 div.tutorials div.tutorial h2{
+    font-size: 18px;
+    text-align: center;
+    padding: 8px 10px;
+    font-weight: bold;
+}
+
+div#section2 div.tutorials div.tutorial ul{
+    list-style-type: none;
+    font-size: 14px;
+}
+
+div#section2 div.tutorials div.tutorial ul li {
+    margin: 0px;
+    padding: 7px;
+
+}
+
+div#section2 div.tutorials div.tutorial ul li a{
+    color: #004160;
+    /*transition: 0.5s;*/
+}
+
+div#section2 div.tutorials div.tutorial ul li a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+div#section2 div.tutorials div.tutorial ul li a:before {
+    content: "•";
+    color: #000;
+    text-shadow: 0px 0px 1px #000;
+    margin: 0px 4px;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+
+div#section2 div.tutorials div.tutorial.beginners{
+    border: 1px solid #DEEBF7;
+    box-shadow: 0 0 3px #DEEBF7;
+}
+
+div#section2 div.tutorials div.tutorial.beginners h2{
+    background-color: #DEEBF7;
+    transition: 0.5s;
+    box-shadow: 0 2px #dcdcdc;
+}
+
+div#section2 div.tutorials div.tutorial.beginners ul li{
+    border-bottom: 1px solid #DEEBF7;
+}
+
+div#section2 div.tutorials div.tutorial.intermediate{
+    border: 1px solid #5B9BD5;
+    box-shadow: 0 0 3px #5B9BD5;
+}
+
+div#section2 div.tutorials div.tutorial.intermediate h2{
+    background-color: #5B9BD5;
+    box-shadow: 0 2px #868686;
+}
+
+div#section2 div.tutorials div.tutorial.intermediate ul li{
+    border-bottom: 1px solid #5B9BD5;
+}
+
+div#section2 div.tutorials div.tutorial.advanced{
+    border: 1px solid #1F4E79;
+    box-shadow: 0 0 3px #1F4E79;
+}
+
+div#section2 div.tutorials div.tutorial.advanced h2{
+    background-color: #1F4E79;
+    box-shadow: 0 2px #000000;
+
+}
+
+div#section2 div.tutorials div.tutorial.advanced ul li{
+    border-bottom: 1px solid #1F4E79;
+}
+
+body.night div#section2 div.tutorials div.tutorial ul li a:hover {
+    color: #ecfffe;
+    font-weight: bold;
+}
+
+div#section2 div.tutorials div.tutorial ul li:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+
+div#section2 div.currencies{
+    background-color: #fafafa;
+    box-shadow: 0 0 1px #afafaf;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+div#section2 div.currencies div.currency{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div#section2 div.currencies div.currency a.nameOfCurrency{
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    color: #004160;
+}
+
+div#section2 div.currencies div.currency:hover a.nameOfCurrency{
+    color: black;
+}
+
+div#section2 div.currencies h2{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.5s;
+
+}
+
+div#section2 div.currencies img{
+    width: 80px;
+    height: 80px;
+}
+
+
+
 
 
 

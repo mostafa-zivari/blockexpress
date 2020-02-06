@@ -12,29 +12,102 @@ body.night div.menu {
 
 body.night div.menu ul li a{
     background: #4f4f4f;
-    color: #ffffff;
+    color: #dcdcdc;;
 }
 
-body.night div#section0 div.slider{
+body.night div.menu ul li.activeLink {
+    background: #909090;
+}
+
+body.night div.menu ul li.activeLink a{
+    color: white;
+
+}
+
+body.night div.menu ul li a:hover{
+    background: #909090;
+    color: white;
+}
+
+
+body.night div#section0 div.slider , body.night div#section1 div.slider{
     background-color: #343434;
 }
 
-body.night div#section0 div.slider div.card img{
+body.night div#section0 div.slider div.card img , body.night div#section1 div.slider div.card img{
     filter: brightness(80%);
 }
 
-body.night div#section0 div.slider div.card a h3{
+body.night div#section0 div.slider div.card a h3, body.night div#section1 div.slider div.card a h3{
     background: #464646d9;
-    color: #dadada;
+    color: #dcdcdc;;
 }
 
-body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot span{
-
+body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot span , body.night div#section1 div.slider.owl-theme .owl-dots .owl-dot span{
     background: #869791;
 
 }
 
 body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot.active span,body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot:hover span{
     background: #dcdcdc;
+}
 
+body.night div#section1 div.slider.owl-theme .owl-dots .owl-dot.active span,body.night div#section1 div.slider.owl-theme .owl-dots .owl-dot:hover span{
+    background: #dcdcdc;
+}
+
+body.night div.dots .dot{
+    background: #869791;
+
+}
+
+body.night div.dots .activePage, body.night div.dots .dot:hover{
+    background: #dcdcdc;
+
+}
+
+body.night div#section1 div.latestNewsContainer{
+    background-color: #343434;
+
+}
+
+body.night div#section1 div.latestNews{
+    background-color: #252323;
+}
+
+body.night div#section1 div.latestNews img {
+    filter: brightness(80%);
+
+}
+
+body.night div#section1 div.latestNews a{
+    color: #dcdcdc;;
+}
+
+
+body.night div#section2 div.tutorials{
+    background-color: #343434;
+
+}
+
+body.night div#section2 div.tutorials div.tutorial ul li a{
+    color: #dcdcdc;
+}
+
+body.night div#section2 div.tutorials div.tutorial ul li a:before{
+    color: #dcdcdc;
+    text-shadow: 0px 0px 1px #dcdcdc;
+}
+
+body.night div#section2 div.tutorials div.tutorial h2 {
+    background-color: #dcdcdc;
+}
+
+body.night div#section2 div.currencies{
+    background-color: #343434;
+
+}
+
+body.night div#section2 div.currencies h2 {
+    color: #dcdcdc;
 }
