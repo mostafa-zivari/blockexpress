@@ -22,7 +22,7 @@ document.onkeydown = function (event) {
             break;
         case 40:
             // down key pressed
-            if (newRow < row || newRow == 0) {
+            if (newRow < numberOfRows || newRow == 0) {
                 newRow++;
                 scrollPageWithDot();
             }
@@ -131,8 +131,6 @@ function scrollPageWithDot() {
         $(".bottomMenu").removeClass("hideMenu");
     }
 
-    var i;
-
 
     $("div.topMenu li").eq(row).removeClass("activeLink");
     $("div.topMenu li").eq(newRow).addClass("activeLink");
@@ -157,17 +155,18 @@ function scrollPageWithDot() {
 // change image of currencies
 
 
-$("div#section2 div.currencies img").hover(function () {
+$("div#section2 div.currencies div.currency").hover(function () {
     var isNight = $("body").hasClass("night");
-    var source = $(this).attr('src');
+    var picture = $(this).find("img");
+    var source = picture.attr('src');
     var i;
     if(isNight){
-        for (i = 0; i < source.length; i++) {
+        /*for (i = 0; i < source.length; i++) {
             if (source[i] == '1') {
                 source = source.substr(0, i) + '0' + source.substr(i + 1);
             }
         }
-        $(this).attr('src', source);
+        picture.attr('src', source);*/
 
     }else{
         for (i = 0; i < source.length; i++) {
@@ -175,21 +174,22 @@ $("div#section2 div.currencies img").hover(function () {
                 source = source.substr(0, i) + '1' + source.substr(i + 1);
             }
         }
-        $(this).attr('src', source);
+        picture.attr('src', source);
     }
 });
 
-$("div#section2 div.currencies img").mouseleave(function () {
+$("div#section2 div.currencies div.currency").mouseleave(function () {
     var isNight = $("body").hasClass("night");
-    var source = $(this).attr('src');
+    var picture = $(this).find("img");
+    var source = picture.attr('src');
     var i;
     if (isNight){
-        for (i = 0; i < source.length; i++) {
+        /*for (i = 0; i < source.length; i++) {
             if (source[i] == '0') {
                 source = source.substr(0, i) + '1' + source.substr(i + 1);
             }
         }
-        $(this).attr('src', source);
+        picture.attr('src', source);*/
     }
     else{
         for (i = 0; i < source.length; i++) {
@@ -197,7 +197,7 @@ $("div#section2 div.currencies img").mouseleave(function () {
                 source = source.substr(0, i) + '0' + source.substr(i + 1);
             }
         }
-        $(this).attr('src', source);
+        picture.attr('src', source);
     }
 });
 

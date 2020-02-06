@@ -38,10 +38,17 @@ body.night div#section0 div.slider div.card img , body.night div#section1 div.sl
     filter: brightness(80%);
 }
 
+body.night div#section0 div.slider div.card:hover img{
+    filter: brightness(100%);
+
+}
+
 body.night div#section0 div.slider div.card a h3, body.night div#section1 div.slider div.card a h3{
     background: #464646d9;
     color: #dcdcdc;;
 }
+
+
 
 body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot span , body.night div#section1 div.slider.owl-theme .owl-dots .owl-dot span{
     background: #869791;
@@ -50,6 +57,11 @@ body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot span , body.nigh
 
 body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot.active span,body.night div#section0 div.slider.owl-theme .owl-dots .owl-dot:hover span{
     background: #dcdcdc;
+}
+
+body.night div#section1 div.slider div.card:hover img{
+    filter: brightness(100%);
+
 }
 
 body.night div#section1 div.slider.owl-theme .owl-dots .owl-dot.active span,body.night div#section1 div.slider.owl-theme .owl-dots .owl-dot:hover span{
@@ -95,8 +107,7 @@ body.night div#section2 div.tutorials div.tutorial ul li a{
 }
 
 body.night div#section2 div.tutorials div.tutorial ul li a:before{
-    color: #dcdcdc;
-    text-shadow: 0px 0px 1px #dcdcdc;
+    background-color: #dcdcdc;
 }
 
 body.night div#section2 div.tutorials div.tutorial h2 {
@@ -108,6 +119,18 @@ body.night div#section2 div.currencies{
 
 }
 
+body.night div#section2 div.currencies div.currency:hover img{
+    filter: brightness(75%);
+}
+
 body.night div#section2 div.currencies h2 {
     color: #dcdcdc;
+}
+
+body.night div#section2 div.currencies div.currency a.nameOfCurrency {
+    color: #dcdcdc;
+}
+
+body.night div#section2 div.currencies div.currency a.nameOfCurrency:hover {
+    color: white;
 }

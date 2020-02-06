@@ -319,7 +319,7 @@ div#section1 div.slider.owl-theme .owl-dots .owl-dot.active span,div#section1 di
 }
 
 div#section1 div.slider div.card{
-    height: 200px;
+    height: 190px;
     background-color: transparent;;
     border-radius: 0px;
     position: relative;
@@ -340,7 +340,7 @@ div#section1 div.slider div.card:hover img{
 
 div#section1 div.slider div.card img{
     width: 100%;
-    height: 200px;
+    height: 190px;
     filter: brightness(100%);
     transition: 0.5s;
     border-radius: 3px;
@@ -369,7 +369,7 @@ div#section1 div.slider div.card a h3{
 div#section1 div.latestNewsContainer {
     background: #fafafa;
     box-shadow: 0 0 1px #afafaf;
-    margin: 15px 0 10px 0;
+    margin-top: 15px;
     padding: 10px 10px 0 10px;
     border-radius: 3px;
     transition: 0.5s;
@@ -379,7 +379,7 @@ div#section1 div.latestNewsContainer {
 
 div#section1 div.latestNews{
     background-color: #fafafa;
-    height: 200px;
+    height: 180px;
     border-radius: 3px;
     padding: 3px;
     box-shadow: 0 0 3px #afafaf;
@@ -398,7 +398,7 @@ div#section1 div.latestNews:hover img{
 
 div#section1 div.latestNews img{
     width: 98%;
-    height: 130px;
+    height: 105px;
     display: block;
     margin: 0 auto 5px auto;
     transition: 0.5s;
@@ -414,6 +414,16 @@ div#section1 div.latestNews a{
 
 div#section1 div.latestNews a:hover {
     color: black;
+    font-weight: bold;
+}
+
+div#section1 div.showAllNews a{
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: 0 0 3px #afafaf;
+}
+
+div#section1 div.showAllNews a:hover{
     font-weight: bold;
 }
 
@@ -457,19 +467,25 @@ div#section2 div.tutorials div.tutorial ul li {
 div#section2 div.tutorials div.tutorial ul li a{
     color: #004160;
     /*transition: 0.5s;*/
+    font-size: 13px;
 }
 
-div#section2 div.tutorials div.tutorial ul li a:hover{
+div#section2 div.tutorials div.tutorial ul li:hover a{
     color: black;
     font-weight: bold;
 }
 
 div#section2 div.tutorials div.tutorial ul li a:before {
-    content: "•";
-    color: #000;
-    text-shadow: 0px 0px 1px #000;
-    margin: 0px 4px;
-    font-weight: bold;
+    display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.375rem;
+    border-radius: 0.375rem;
+    height: 7px;
+    width: 7px;
+    margin-right: 5px;
+    margin-left: 3px;
+    /* margin-top: 5px; */
+    background-color: #004160;
     transition: 0.5s;
 
 }
@@ -533,7 +549,7 @@ div#section2 div.currencies{
     background-color: #fafafa;
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
-    margin-top: 10px;
+    margin-top: 7px;
     padding: 10px;
     transition: 0.5s;
 }
@@ -541,18 +557,22 @@ div#section2 div.currencies{
 div#section2 div.currencies div.currency{
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 div#section2 div.currencies div.currency a.nameOfCurrency{
     display: block;
     text-align: center;
-    margin-top: 5px;
     color: #004160;
+    font-size: 14px;
+    margin-top: 3px;
+    transition: 0.3s;
 }
 
 div#section2 div.currencies div.currency:hover a.nameOfCurrency{
     color: black;
+    font-weight: bold;
+
 }
 
 div#section2 div.currencies h2{
@@ -560,7 +580,7 @@ div#section2 div.currencies h2{
     width: 100%;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     transition: 0.5s;
 
 }
@@ -570,6 +590,16 @@ div#section2 div.currencies img{
     height: 80px;
 }
 
+div#section2 div.showAllArticles a{
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: 0 0 3px #afafaf;
+}
+
+
+div#section2 div.showAllArticles a:hover{
+    font-weight: bold;
+}
 
 
 
