@@ -1,7 +1,7 @@
 var scrolled = 0;
 var row = 0;
 var newRow = 0;
-const numberOfRows = 3;
+const numberOfRows = 4;
 var loading = false;
 var delayInMilliseconds = 1000;
 var lastScrollTop = 0;
@@ -69,10 +69,14 @@ $('.toggle').click(function () {
 });
 
 $("div#section0 .slider").owlCarousel({
-
+    nav:true,
+    dots:false,
     loop: true,
     margin: 10,
     rtl: true,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
 
     responsive: {
         0: {
@@ -89,6 +93,7 @@ $("div#section0 .slider").owlCarousel({
     }
 
 });
+
 $("div#section1 .slider").owlCarousel({
 
     loop: true,
@@ -110,6 +115,69 @@ $("div#section1 .slider").owlCarousel({
         }
     }
 
+});
+
+$("div#section2 div.videos div.slider").owlCarousel({
+    loop: true,
+    margin: 10,
+    rtl: true,
+    center: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1,
+            autoplay: false
+        },
+        600: {
+            items: 3,
+            autoplay: false
+        },
+        1000: {
+            items: 4
+        }
+    }
+});
+
+$("div#section2 div.infographics div.slider").owlCarousel({
+    loop: true,
+    margin: 10,
+    rtl: true,
+    center: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1,
+            autoplay: false
+        },
+        600: {
+            items: 3,
+            autoplay: false
+        },
+        1000: {
+            items: 6
+        }
+    }
+});
+
+$("div#section2 div.podcasts div.slider").owlCarousel({
+    loop: true,
+    margin: 10,
+    rtl: true,
+    center: true,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1,
+            autoplay: false
+        },
+        600: {
+            items: 3,
+            autoplay: false
+        },
+        1000: {
+            items: 4
+        }
+    }
 });
 
 
@@ -158,7 +226,7 @@ function scrollPageWithDot() {
 // change image of currencies
 
 
-$("div#section2 div.currencies div.currency").hover(function () {
+$("div#section3 div.currencies div.currency").hover(function () {
     var isNight = $("body").hasClass("night");
     var picture = $(this).find("img");
     var source = picture.attr('src');
@@ -181,7 +249,7 @@ $("div#section2 div.currencies div.currency").hover(function () {
     }
 });
 
-$("div#section2 div.currencies div.currency").mouseleave(function () {
+$("div#section3 div.currencies div.currency").mouseleave(function () {
     var isNight = $("body").hasClass("night");
     var picture = $(this).find("img");
     var source = picture.attr('src');
@@ -239,14 +307,14 @@ function changeColorOfMenuIcon() {
 
 function changeColorOfCurrencies() {
     var isNight = $("body").hasClass("night");
-    var currencyCount = $("div#section2 div.currencies div.individualCurrency").children().length;
+    var currencyCount = $("div#section3 div.currencies div.individualCurrency").children().length;
     var i, j;
     var imageSource;
     var picture;
     if (isNight) {
         for (i = 0; i < currencyCount; ++i) {
 
-            var picture = $('div#section2 div.currencies div.individualCurrency').children().eq(i).find("img");
+            var picture = $('div#section3 div.currencies div.individualCurrency').children().eq(i).find("img");
             imageSource = picture.attr('src');
 
             for (j = 0; j < imageSource.length; j++) {
@@ -263,7 +331,7 @@ function changeColorOfCurrencies() {
     } else {
         for (i = 0; i < currencyCount; ++i) {
 
-            var picture = $('div#section2 div.currencies div.individualCurrency').children().eq(i).find("img");
+            var picture = $('div#section3 div.currencies div.individualCurrency').children().eq(i).find("img");
             imageSource = picture.attr('src');
 
             for (j = 0; j < imageSource.length; j++) {

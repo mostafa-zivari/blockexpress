@@ -62,7 +62,7 @@
 
 body{
     transition: 0.5s;
-    background-color: #f5f5f5ba;
+    background-color: #f0f0f0ba;
 }
 
 a:hover{
@@ -121,7 +121,7 @@ div#section0{
 
 
 div#section0 div.poster{
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     transition: 0.5s;
     position: relative;
     border-radius: 3px;
@@ -183,12 +183,16 @@ div#section0 div.poster img{
 
 div.menu{
     height: fit-content;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     padding: 5px 5px;
     transition: 0.5s;
     z-index: 2;
     border-radius: 3px;
     box-shadow: 0 0 1px #afafaf;
+}
+
+div.menu.topMenu{
+    border-radius: 0 0 3px 3px;
 }
 
 div.menu.hideMenu {
@@ -272,12 +276,22 @@ div.menu ul li.activeLink a{
 div#section0 div.slider{
     height: fit-content;
     margin-top: 5px;
-    background: #f5f5f5;
+    background: #f0f0f0;
     padding: 5px 5px 0 5px;
     transition: 0.5s;
     border-radius: 3px;
     box-shadow: 0 0 1px #afafaf;
 
+}
+
+
+div#section0 div.slider div.owl-nav button:focus{
+    outline: none;
+
+}
+
+div#section0 div.slider div.owl-nav button:hover{
+    background-color: #3cb1f6;
 }
 
 div#section0 div.slider div.owl-dots button ,div#section0 div.slider div.owl-dots button span:focus{
@@ -349,7 +363,7 @@ div#section1{
 div#section1 div.slider{
     height: fit-content;
     margin-top: 5px;
-    background: #f5f5f5;
+    background: #f0f0f0;
     padding: 5px 5px 0 5px;
     transition: 0.5s;
     border-radius: 3px;
@@ -420,7 +434,7 @@ div#section1 div.slider div.card a h3{
 }
 
 div#section1 div.latestNewsContainer {
-    background: #f5f5f5;
+    background: #f0f0f0;
     box-shadow: 0 0 1px #afafaf;
     margin-top: 10px;
     padding: 10px 10px 0 10px;
@@ -431,7 +445,7 @@ div#section1 div.latestNewsContainer {
 
 
 div#section1 div.latestNews{
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     height: 180px;
     border-radius: 3px;
     padding: 3px;
@@ -483,10 +497,113 @@ div#section1 div.showAllNews a:hover{
 }
 
 
-/*section 2 */
+/* section 2 */
 
-div#section2 div.tutorials {
-    background-color: #f5f5f5;
+div#section2{
+
+}
+
+body.night div#section2 img{
+    transition: 0.5s;
+}
+
+div#section2 div.videos, div#section2 div.podcasts , div#section2 div.infographics{
+    box-shadow: 0 0 1px #afafaf;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    transition: 0.5s;
+
+}
+
+div#section2 div.podcasts , div#section2 div.infographics{
+    margin-top: 15px;
+
+}
+
+div#section2 div.videos div.mostViewVideos{
+    margin-bottom: 10px;
+    height: max-content;
+}
+
+div#section2 div.videos div.mostViewVideo{
+    box-shadow: 0 0 1px #afafaf;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    height: 100%;
+}
+
+div#section2 div.videos div.mostViewVideo img{
+    width: 100%;
+    height: 110px;
+    margin-bottom: 5px;
+    border-radius: 3px 3px 0 0;
+}
+
+div#section2 div.videos div.mostViewVideo a{
+    font-size: 12px;
+    /* width: 100%; */
+    text-align: center;
+    display: block;
+    color: #004160;
+    transition: 0.5s;
+
+}
+
+
+div#section2 div.videos h3 , div#section2 div.podcasts h3 , div#section2 div.infographics h3{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.5s;
+
+}
+
+div#section2 div.videos h3 img, div#section2 div.podcasts h3 img, div#section2 div.infographics h3 img{
+    width: 23px;
+    height: 23px;
+    margin-left: 5px;
+}
+
+div#section2 div.videos div.slider , div#section2 div.podcasts div.slider , div#section2 div.infographics div.slider{
+    cursor: grab;
+}
+
+
+div#section2 div.videos div.slider div.card , div#section2 div.podcasts div.slider div.card , div#section2 div.infographics div.slider div.card {
+    box-shadow: 0 0 1px #fafafa;
+    margin: 2px 0;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    transition: 0.5s;
+
+}
+
+div#section2 div.videos div.slider div.card img , div#section2 div.podcasts div.slider div.card img , div#section2 div.infographics div.slider div.card img{
+    height: 75px;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px 1px 0 #afafaf;
+}
+
+div#section2 div.videos div.slider div.card a , div#section2 div.podcasts div.slider div.card a , div#section2 div.infographics div.slider div.card a{
+    font-size: 11px;
+    text-align: center;
+    margin: 8px 0;
+    color: #004160;
+    transition: 0.5s;
+
+}
+
+
+
+
+/*section 3 */
+
+div#section3 div.tutorials {
+    background-color: #f0f0f0;
     padding: 10px;
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
@@ -495,42 +612,42 @@ div#section2 div.tutorials {
 }
 
 
-div#section2 div.tutorials div.tutorial{
+div#section3 div.tutorials div.tutorial{
     border-radius: 3px;
     border-bottom: none;
     height: 100%;
 }
 
-div#section2 div.tutorials div.tutorial h2{
+div#section3 div.tutorials div.tutorial h2{
     font-size: 18px;
     text-align: center;
     padding: 8px 10px;
     font-weight: bold;
 }
 
-div#section2 div.tutorials div.tutorial ul{
+div#section3 div.tutorials div.tutorial ul{
     list-style-type: none;
     font-size: 14px;
 }
 
-div#section2 div.tutorials div.tutorial ul li {
+div#section3 div.tutorials div.tutorial ul li {
     margin: 0px;
     padding: 7px;
 
 }
 
-div#section2 div.tutorials div.tutorial ul li a{
+div#section3 div.tutorials div.tutorial ul li a{
     color: #004160;
     /*transition: 0.5s;*/
     font-size: 13px;
 }
 
-div#section2 div.tutorials div.tutorial ul li:hover a{
+div#section3 div.tutorials div.tutorial ul li:hover a{
     color: black;
     font-weight: bold;
 }
 
-div#section2 div.tutorials div.tutorial ul li a:before {
+div#section3 div.tutorials div.tutorial ul li a:before {
     display: inline-block;
     content: '';
     -webkit-border-radius: 0.375rem;
@@ -545,63 +662,63 @@ div#section2 div.tutorials div.tutorial ul li a:before {
 
 }
 
-div#section2 div.tutorials div.tutorial.beginners{
+div#section3 div.tutorials div.tutorial.beginners{
     border: 1px solid #DEEBF7;
     box-shadow: 0 0 3px #DEEBF7;
 }
 
-div#section2 div.tutorials div.tutorial.beginners h2{
+div#section3 div.tutorials div.tutorial.beginners h2{
     background-color: #DEEBF7;
     transition: 0.5s;
     box-shadow: 0 2px #dcdcdc;
 }
 
-div#section2 div.tutorials div.tutorial.beginners ul li{
+div#section3 div.tutorials div.tutorial.beginners ul li{
     border-bottom: 1px solid #DEEBF7;
 }
 
-div#section2 div.tutorials div.tutorial.intermediate{
+div#section3 div.tutorials div.tutorial.intermediate{
     border: 1px solid #5B9BD5;
     box-shadow: 0 0 3px #5B9BD5;
 }
 
-div#section2 div.tutorials div.tutorial.intermediate h2{
+div#section3 div.tutorials div.tutorial.intermediate h2{
     background-color: #5B9BD5;
     box-shadow: 0 2px #868686;
 }
 
-div#section2 div.tutorials div.tutorial.intermediate ul li{
+div#section3 div.tutorials div.tutorial.intermediate ul li{
     border-bottom: 1px solid #5B9BD5;
 }
 
-div#section2 div.tutorials div.tutorial.advanced{
+div#section3 div.tutorials div.tutorial.advanced{
     border: 1px solid #1F4E79;
     box-shadow: 0 0 3px #1F4E79;
 }
 
-div#section2 div.tutorials div.tutorial.advanced h2{
+div#section3 div.tutorials div.tutorial.advanced h2{
     background-color: #1F4E79;
     box-shadow: 0 2px #000000;
 
 }
 
-div#section2 div.tutorials div.tutorial.advanced ul li{
+div#section3 div.tutorials div.tutorial.advanced ul li{
     border-bottom: 1px solid #1F4E79;
 }
 
-body.night div#section2 div.tutorials div.tutorial ul li a:hover {
+body.night div#section3 div.tutorials div.tutorial ul li a:hover {
     color: #ecfffe;
     font-weight: bold;
 }
 
-div#section2 div.tutorials div.tutorial ul li:last-child {
+div#section3 div.tutorials div.tutorial ul li:last-child {
     border-bottom: none !important;
     padding-bottom: 0 !important;
 }
 
 
-div#section2 div.currencies{
-    background-color: #f5f5f5;
+div#section3 div.currencies{
+    background-color: #f0f0f0;
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
     margin-top: 7px;
@@ -609,13 +726,13 @@ div#section2 div.currencies{
     transition: 0.5s;
 }
 
-div#section2 div.currencies div.currency{
+div#section3 div.currencies div.currency{
     width: 100%;
     text-align: center;
     margin-bottom: 15px;
 }
 
-div#section2 div.currencies div.currency a.nameOfCurrency{
+div#section3 div.currencies div.currency a.nameOfCurrency{
     display: block;
     text-align: center;
     color: #004160;
@@ -624,13 +741,13 @@ div#section2 div.currencies div.currency a.nameOfCurrency{
     transition: 0.3s;
 }
 
-div#section2 div.currencies div.currency:hover a.nameOfCurrency{
+div#section3 div.currencies div.currency:hover a.nameOfCurrency{
     color: black;
     font-weight: bold;
 
 }
 
-div#section2 div.currencies h2{
+div#section3 div.currencies h2{
     text-align: center;
     width: 100%;
     font-size: 20px;
@@ -640,12 +757,12 @@ div#section2 div.currencies h2{
 
 }
 
-div#section2 div.currencies img{
+div#section3 div.currencies img{
     width: 80px;
     height: 80px;
 }
 
-div#section2 div.showAllArticles a{
+div#section3 div.showAllArticles a{
     width: 100%;
     margin-top: 5px;
     box-shadow: 0 0 3px #afafaf;
@@ -672,7 +789,7 @@ footer div.upperFooter div.linkBox{
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
     padding: 10px 0;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     height: 100%;
     transition: 0.5s;
 
@@ -745,7 +862,7 @@ footer div.middleFooter div.letterNews{
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
     padding: 20px 0;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     height: 100%;
     transition: 0.5s;
 
@@ -780,7 +897,7 @@ footer div.middleFooter div.letterNews form input.emailInput{
 footer div.middleFooter div.socialMedia{
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     height: 100%;
     padding-top: 35px;
     transition: 0.5s;
@@ -806,7 +923,7 @@ footer div.downFooter {
     border-radius: 3px;
     padding: 10px 0;
     transition: 0.5s;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
 
 }
 
@@ -819,7 +936,7 @@ footer div.downFooter div.advertisement img{
     height: 80px;
     margin-bottom: 10px;
     border-radius: 3px;
-    box-shadow: 0 0 1px #f5f5f5;
+    box-shadow: 0 0 1px #f0f0f0;
 
 }
 

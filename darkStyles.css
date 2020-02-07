@@ -94,45 +94,76 @@ body.night div#section1 div.latestNews img {
 }
 
 body.night div#section1 div.latestNews a{
-    color: #dcdcdc;;
-}
-
-
-body.night div#section2 div.tutorials{
-    background-color: #343434;
-
-}
-
-body.night div#section2 div.tutorials div.tutorial ul li a{
     color: #dcdcdc;
 }
 
-body.night div#section2 div.tutorials div.tutorial ul li a:before{
-    background-color: #dcdcdc;
+body.night div#section2 img{
+    filter: brightness(80%);
 }
 
-body.night div#section2 div.tutorials div.tutorial h2 {
-    background-color: #dcdcdc;
+body.night div#section2 img:hover{
+    filter: brightness(100%);
+
 }
 
-body.night div#section2 div.currencies{
+body.night div#section2 div.videos div.slider div.card ,body.night div#section2 div.podcasts div.slider div.card ,body.night div#section2 div.infographics div.slider div.card {
+    background-color: #343434;
+}
+
+body.night div#section2 div.videos div.slider div.card a ,body.night div#section2 div.podcasts div.slider div.card a ,body.night div#section2 div.infographics div.slider div.card a {
+    color: #dcdcdc;
+
+}
+
+body.night div#section2 div.videos,body.night div#section2 div.podcasts ,body.night div#section2 div.infographics{
+    background-color: #252323;
+}
+
+body.night div#section2 div.videos h3 ,body.night div#section2 div.podcasts h3 ,body.night div#section2 div.infographics h3{
+    color: #dcdcdc;
+
+}
+
+body.night div#section2 div.videos div.mostViewVideo a{
+    color: #dcdcdc;
+}
+
+
+body.night div#section3 div.tutorials{
     background-color: #343434;
 
 }
 
-body.night div#section2 div.currencies div.currency:hover img{
+body.night div#section3 div.tutorials div.tutorial ul li a{
+    color: #dcdcdc;
+}
+
+body.night div#section3 div.tutorials div.tutorial ul li a:before{
+    background-color: #dcdcdc;
+}
+
+body.night div#section3 div.tutorials div.tutorial h2 {
+    background-color: #dcdcdc;
+}
+
+body.night div#section3 div.currencies{
+    background-color: #343434;
+
+}
+
+body.night div#section3 div.currencies div.currency:hover img{
     filter: brightness(75%);
 }
 
-body.night div#section2 div.currencies h2 {
+body.night div#section3 div.currencies h2 {
     color: #dcdcdc;
 }
 
-body.night div#section2 div.currencies div.currency a.nameOfCurrency {
+body.night div#section3 div.currencies div.currency a.nameOfCurrency {
     color: #dcdcdc;
 }
 
-body.night div#section2 div.currencies div.currency a.nameOfCurrency:hover {
+body.night div#section3 div.currencies div.currency a.nameOfCurrency:hover {
     color: white;
 }
 
