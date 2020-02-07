@@ -62,8 +62,9 @@ $("div.dots span.dot").click(function () {
 $('.toggle').click(function () {
     $('.toggle').toggleClass('active');
     $('body').toggleClass('night');
+
     changeColorOfMenuIcon();
-    changeColorOfSocialMedia();
+    changeColorOfCurrencies();
     changeColorOfSocialMedia();
 });
 
