@@ -89,6 +89,7 @@ body.night div#section1 div.latestNews{
 
 body.night div#section1 div.latestNews img {
     filter: brightness(80%);
+    box-shadow: 0px 1px 0px #afafaf;
 
 }
 
@@ -163,6 +164,10 @@ body.night footer div.upperFooter div.linkBox img.googleMap{
 body.night footer div.middleFooter div.letterNews{
     background-color: #343434;
 }
+body.night footer div.middleFooter div.letterNews form input.emailInput{
+    background: #4f4f4f;
+    color: #dcdcdc;
+}
 
 body.night footer div.middleFooter div.socialMedia {
     background-color: #343434;
@@ -179,6 +184,15 @@ body.night footer div.middleFooter div.letterNews h5 {
 
 }
 
+body.night footer div.downFooter{
+    background-color: #343434;
+
+}
+
 body.night footer div.downFooter div.enamad p{
     color: #dcdcdc;
 }
+
+/*
+secondary color : #6c757d
+*/

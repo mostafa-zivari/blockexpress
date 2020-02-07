@@ -1,5 +1,4 @@
 /* adding font */
-
 @font-face {
     font-family: iranans;
     font-style: normal;
@@ -63,7 +62,7 @@
 
 body{
     transition: 0.5s;
-    background-color: #f5f5f587;
+    background-color: #f5f5f5ba;
 }
 
 a:hover{
@@ -122,7 +121,7 @@ div#section0{
 
 
 div#section0 div.poster{
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     transition: 0.5s;
     position: relative;
     border-radius: 3px;
@@ -184,7 +183,7 @@ div#section0 div.poster img{
 
 div.menu{
     height: fit-content;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     padding: 5px 5px;
     transition: 0.5s;
     z-index: 2;
@@ -273,7 +272,7 @@ div.menu ul li.activeLink a{
 div#section0 div.slider{
     height: fit-content;
     margin-top: 5px;
-    background: #fafafa;
+    background: #f5f5f5;
     padding: 5px 5px 0 5px;
     transition: 0.5s;
     border-radius: 3px;
@@ -350,7 +349,7 @@ div#section1{
 div#section1 div.slider{
     height: fit-content;
     margin-top: 5px;
-    background: #fafafa;
+    background: #f5f5f5;
     padding: 5px 5px 0 5px;
     transition: 0.5s;
     border-radius: 3px;
@@ -421,9 +420,9 @@ div#section1 div.slider div.card a h3{
 }
 
 div#section1 div.latestNewsContainer {
-    background: #fafafa;
+    background: #f5f5f5;
     box-shadow: 0 0 1px #afafaf;
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 10px 10px 0 10px;
     border-radius: 3px;
     transition: 0.5s;
@@ -432,7 +431,7 @@ div#section1 div.latestNewsContainer {
 
 
 div#section1 div.latestNews{
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     height: 180px;
     border-radius: 3px;
     padding: 3px;
@@ -456,6 +455,8 @@ div#section1 div.latestNews img{
     display: block;
     margin: 0 auto 5px auto;
     transition: 0.5s;
+    border-radius: 2px;
+    box-shadow: 1px 2px 1px #afafaf;
 
 }
 
@@ -485,7 +486,7 @@ div#section1 div.showAllNews a:hover{
 /*section 2 */
 
 div#section2 div.tutorials {
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     padding: 10px;
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
@@ -600,7 +601,7 @@ div#section2 div.tutorials div.tutorial ul li:last-child {
 
 
 div#section2 div.currencies{
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
     margin-top: 7px;
@@ -671,7 +672,7 @@ footer div.upperFooter div.linkBox{
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
     padding: 10px 0;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     height: 100%;
     transition: 0.5s;
 
@@ -744,7 +745,7 @@ footer div.middleFooter div.letterNews{
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
     padding: 20px 0;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     height: 100%;
     transition: 0.5s;
 
@@ -768,18 +769,20 @@ footer div.middleFooter div.letterNews form input{
     margin: 0 auto;
 }
 
+
 footer div.middleFooter div.letterNews form input.emailInput{
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    transition: 0.5s;
 
 }
 
 footer div.middleFooter div.socialMedia{
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     height: 100%;
-    padding: 20px 0;
+    padding-top: 35px;
     transition: 0.5s;
 
 }
@@ -802,6 +805,9 @@ footer div.downFooter {
     box-shadow: 0 0 1px #afafaf;
     border-radius: 3px;
     padding: 10px 0;
+    transition: 0.5s;
+    background-color: #f5f5f5;
+
 }
 
 footer div.downFooter div.advertisement{
@@ -810,9 +816,16 @@ footer div.downFooter div.advertisement{
 
 footer div.downFooter div.advertisement img{
     width: 90%;
-    /* margin: 0 auto; */
     height: 80px;
     margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 1px #f5f5f5;
+
+}
+
+footer div.downFooter div.advertisement img:hover{
+    filter: brightness(90%);
+
 }
 
 footer div.downFooter div.enamad{

@@ -62,7 +62,8 @@ $("div.dots span.dot").click(function () {
 $('.toggle').click(function () {
     $('.toggle').toggleClass('active');
     $('body').toggleClass('night');
-    changeColorOfCurrencies();
+    changeColorOfMenuIcon();
+    changeColorOfSocialMedia();
     changeColorOfSocialMedia();
 });
 
@@ -161,7 +162,7 @@ $("div#section2 div.currencies div.currency").hover(function () {
     var picture = $(this).find("img");
     var source = picture.attr('src');
     var i;
-    if(isNight){
+    if (isNight) {
         /*for (i = 0; i < source.length; i++) {
             if (source[i] == '1') {
                 source = source.substr(0, i) + '0' + source.substr(i + 1);
@@ -169,7 +170,7 @@ $("div#section2 div.currencies div.currency").hover(function () {
         }
         picture.attr('src', source);*/
 
-    }else{
+    } else {
         for (i = 0; i < source.length; i++) {
             if (source[i] == '0') {
                 source = source.substr(0, i) + '1' + source.substr(i + 1);
@@ -184,15 +185,14 @@ $("div#section2 div.currencies div.currency").mouseleave(function () {
     var picture = $(this).find("img");
     var source = picture.attr('src');
     var i;
-    if (isNight){
+    if (isNight) {
         /*for (i = 0; i < source.length; i++) {
             if (source[i] == '0') {
                 source = source.substr(0, i) + '1' + source.substr(i + 1);
             }
         }
         picture.attr('src', source);*/
-    }
-    else{
+    } else {
         for (i = 0; i < source.length; i++) {
             if (source[i] == '1') {
                 source = source.substr(0, i) + '0' + source.substr(i + 1);
@@ -203,10 +203,43 @@ $("div#section2 div.currencies div.currency").mouseleave(function () {
 });
 
 
+function changeColorOfMenuIcon() {
+    var isNight = $("body").hasClass("night");
+    var menuCount = $("div.menu nav ul").children().length;
+    var i , j , icon , source;
+
+    if (isNight) {
+        for (i = 0; i < menuCount; i++) {
+            icon = $("div.menu nav ul").children().eq(i).find("img");
+            source = icon.attr('src');
+            for (j = 0 ; j < source.length ; j++){
+                if (source[j] == '0'){
+                    source = source.substr(0, j) + '1' + source.substr(j + 1);
+                    break;
+                }
+            }
+            icon.attr('src' , source);
+        }
+    }else{
+        for (i = 0; i < menuCount; i++) {
+            icon = $("div.menu nav ul").children().eq(i).find("img");
+            source = icon.attr('src');
+            for (j = 0 ; j < source.length ; j++){
+                if (source[j] == '1'){
+                    source = source.substr(0, j) + '0' + source.substr(j + 1);
+                    break;
+                }
+            }
+            icon.attr('src' , source);
+        }
+    }
+
+}
+
 function changeColorOfCurrencies() {
     var isNight = $("body").hasClass("night");
     var currencyCount = $("div#section2 div.currencies div.individualCurrency").children().length;
-    var i , j;
+    var i, j;
     var imageSource;
     var picture;
     if (isNight) {
@@ -215,8 +248,8 @@ function changeColorOfCurrencies() {
             var picture = $('div#section2 div.currencies div.individualCurrency').children().eq(i).find("img");
             imageSource = picture.attr('src');
 
-            for (j = 0 ; j < imageSource.length ; j++){
-                if (imageSource[j] == '0'){
+            for (j = 0; j < imageSource.length; j++) {
+                if (imageSource[j] == '0') {
                     imageSource = imageSource.substr(0, j) + '1' + imageSource.substr(j + 1);
                     break;
                 }
@@ -226,14 +259,14 @@ function changeColorOfCurrencies() {
             picture.attr('src', imageSource);
         }
 
-    }else{
+    } else {
         for (i = 0; i < currencyCount; ++i) {
 
             var picture = $('div#section2 div.currencies div.individualCurrency').children().eq(i).find("img");
             imageSource = picture.attr('src');
 
-            for (j = 0 ; j < imageSource.length ; j++){
-                if (imageSource[j] == '1'){
+            for (j = 0; j < imageSource.length; j++) {
+                if (imageSource[j] == '1') {
                     imageSource = imageSource.substr(0, j) + '0' + imageSource.substr(j + 1);
                     break;
                 }
@@ -250,36 +283,35 @@ function changeColorOfCurrencies() {
 function changeColorOfSocialMedia() {
     var isNight = $("body").hasClass("night");
     var socialMediaCount = $("footer div.socialMedia div.row").children().length;
-    var i , j , img , src;
+    var i, j, img, src;
 
     if (isNight) {
         for (i = 0; i < socialMediaCount; i++) {
             img = $("footer div.socialMedia div.row").children().eq(i).find("img");
             src = img.attr('src');
-            for (j = 0 ; j < src.length ; j++){
-                if (src[j] == '0'){
+            for (j = 0; j < src.length; j++) {
+                if (src[j] == '0') {
                     src = src.substr(0, j) + '1' + src.substr(j + 1);
                     break;
                 }
             }
-            img.attr('src' , src);
+            img.attr('src', src);
         }
-    }else{
+    } else {
         for (i = 0; i < socialMediaCount; i++) {
             img = $("footer div.socialMedia div.row").children().eq(i).find("img");
             src = img.attr('src');
-            for (j = 0 ; j < src.length ; j++){
-                if (src[j] == '1'){
+            for (j = 0; j < src.length; j++) {
+                if (src[j] == '1') {
                     src = src.substr(0, j) + '0' + src.substr(j + 1);
                     break;
                 }
             }
-            img.attr('src' , src);
+            img.attr('src', src);
         }
     }
 
 }
-
 
 
 // social media icons change color
@@ -288,16 +320,16 @@ $("footer div.middleFooter div.socialMedia div.row div.col-md-4").hover(function
     var isNight = $("body").hasClass("night");
     var picture = $(this).find("img");
     var src = picture.attr("src");
-    var i ;
+    var i;
 
-    if(!isNight){
-        for (i = 0 ; i < src.length ; i++){
-            if (src[i] == '0'){
+    if (!isNight) {
+        for (i = 0; i < src.length; i++) {
+            if (src[i] == '0') {
                 src = src.substr(0, i) + '1' + src.substr(i + 1);
                 break;
             }
         }
-        picture.attr('src' , src);
+        picture.attr('src', src);
     }
 
 });
@@ -306,20 +338,19 @@ $("footer div.middleFooter div.socialMedia div.row div.col-md-4").mouseleave(fun
     var isNight = $("body").hasClass("night");
     var picture = $(this).find("img");
     var src = picture.attr("src");
-    var i ;
+    var i;
 
-    if(!isNight){
-        for (i = 0 ; i < src.length ; i++){
-            if (src[i] == '1'){
+    if (!isNight) {
+        for (i = 0; i < src.length; i++) {
+            if (src[i] == '1') {
                 src = src.substr(0, i) + '0' + src.substr(i + 1);
                 break;
             }
         }
-        picture.attr('src' , src);
+        picture.attr('src', src);
     }
 
 });
-
 
 
 /*$('div#section2 div.currencies img').on({
