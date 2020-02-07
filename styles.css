@@ -602,8 +602,181 @@ div#section2 div.showAllArticles a:hover{
 }
 
 
+/* footer */
 
+footer{
+    /*margin-bottom: 10px;*/
 
+}
+
+footer div.upperFooter{
+    height: max-content;
+}
+
+footer div.upperFooter div.linkBox{
+    box-shadow: 0 0 1px #afafaf;
+    border-radius: 3px;
+    padding: 10px 0;
+    background-color: #fafafa;
+    height: 100%;
+    transition: 0.5s;
+
+}
+
+footer div.upperFooter div.linkBox h4{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+
+}
+
+footer div.upperFooter div.linkBox ul{
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+footer div.upperFooter div.linkBox ul li{
+    margin-bottom: 5px;
+    font-size: 14px;
+
+}
+
+footer div.upperFooter div.linkBox ul li:last-child{
+    margin-bottom: 0;
+}
+
+footer div.upperFooter div.linkBox ul li a{
+    color: #004160;
+    transition: 0.5s;
+}
+
+footer div.upperFooter div.linkBox ul li a:hover{
+    color: #000000;
+    font-weight: bold;
+}
+
+footer div.upperFooter div.linkBox ul li a:before {
+
+    display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.375rem;
+    border-radius: 0.375rem;
+    height: 7px;
+    width: 7px;
+    margin-right: 5px;
+    margin-left: 8px;
+    /* margin-top: 5px; */
+    background-color: #004160;
+    transition: 0.5s;
+
+}
+
+footer div.upperFooter div.linkBox img.googleMap{
+    width: 100%;
+    height: 120px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+footer div.middleFooter{
+    height: max-content;
+    margin-top: 20px;
+}
+
+footer div.middleFooter div.letterNews{
+    box-shadow: 0 0 1px #afafaf;
+    border-radius: 3px;
+    padding: 20px 0;
+    background-color: #fafafa;
+    height: 100%;
+    transition: 0.5s;
+
+}
+
+footer div.middleFooter div.letterNews h5{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+
+footer div.middleFooter div.letterNews form{
+    padding: 0 40px;
+    margin-bottom: 0;
+}
+
+footer div.middleFooter div.letterNews form input{
+    display: block;
+    margin: 0 auto;
+}
+
+footer div.middleFooter div.letterNews form input.emailInput{
+    font-size: 14px;
+    margin-bottom: 15px;
+
+}
+
+footer div.middleFooter div.socialMedia{
+    box-shadow: 0 0 1px #afafaf;
+    border-radius: 3px;
+    background-color: #fafafa;
+    height: 100%;
+    padding: 20px 0;
+    transition: 0.5s;
+
+}
+
+footer div.middleFooter div.socialMedia a{
+    display: block;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+footer div.middleFooter div.socialMedia img{
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+
+}
+
+footer div.downFooter {
+    margin-top: 10px;
+    box-shadow: 0 0 1px #afafaf;
+    border-radius: 3px;
+    padding: 10px 0;
+}
+
+footer div.downFooter div.advertisement{
+    text-align: center;
+}
+
+footer div.downFooter div.advertisement img{
+    width: 90%;
+    /* margin: 0 auto; */
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+footer div.downFooter div.enamad{
+    text-align: center;
+}
+
+footer div.downFooter div.enamad img{
+    width: 90%;
+    height: 130px;
+}
+
+footer div.downFooter div.enamad p{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 19px;
+    transition: 0.5s;
+    color: #004160;
+}
 
 
 

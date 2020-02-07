@@ -134,3 +134,51 @@ body.night div#section2 div.currencies div.currency a.nameOfCurrency {
 body.night div#section2 div.currencies div.currency a.nameOfCurrency:hover {
     color: white;
 }
+
+body.night footer div.upperFooter div.linkBox{
+    background-color: #343434;
+}
+
+body.night footer div.upperFooter div.linkBox h4{
+    color: #dcdcdc;
+}
+
+body.night footer div.upperFooter div.linkBox ul li a{
+    color: #dcdcdc;
+}
+
+body.night footer div.upperFooter div.linkBox ul li a:hover{
+    color: white;
+}
+
+body.night footer div.upperFooter div.linkBox ul li a:before {
+    background-color: #dcdcdc;
+}
+
+body.night footer div.upperFooter div.linkBox img.googleMap{
+    filter: brightness(75%);
+
+}
+
+body.night footer div.middleFooter div.letterNews{
+    background-color: #343434;
+}
+
+body.night footer div.middleFooter div.socialMedia {
+    background-color: #343434;
+
+}
+
+body.night footer div.middleFooter div.socialMedia img:hover{
+    filter: brightness(75%);
+
+}
+
+body.night footer div.middleFooter div.letterNews h5 {
+    color: #dcdcdc;
+
+}
+
+body.night footer div.downFooter div.enamad p{
+    color: #dcdcdc;
+}

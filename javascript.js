@@ -1,7 +1,7 @@
 var scrolled = 0;
 var row = 0;
 var newRow = 0;
-const numberOfRows = 2;
+const numberOfRows = 3;
 var loading = false;
 var delayInMilliseconds = 1000;
 var lastScrollTop = 0;
@@ -62,7 +62,8 @@ $("div.dots span.dot").click(function () {
 $('.toggle').click(function () {
     $('.toggle').toggleClass('active');
     $('body').toggleClass('night');
-    changeColorOfIcons();
+    changeColorOfCurrencies();
+    changeColorOfSocialMedia();
 });
 
 $("div#section0 .slider").owlCarousel({
@@ -202,7 +203,7 @@ $("div#section2 div.currencies div.currency").mouseleave(function () {
 });
 
 
-function changeColorOfIcons() {
+function changeColorOfCurrencies() {
     var isNight = $("body").hasClass("night");
     var currencyCount = $("div#section2 div.currencies div.individualCurrency").children().length;
     var i , j;
@@ -245,6 +246,80 @@ function changeColorOfIcons() {
     }
 
 }
+
+function changeColorOfSocialMedia() {
+    var isNight = $("body").hasClass("night");
+    var socialMediaCount = $("footer div.socialMedia div.row").children().length;
+    var i , j , img , src;
+
+    if (isNight) {
+        for (i = 0; i < socialMediaCount; i++) {
+            img = $("footer div.socialMedia div.row").children().eq(i).find("img");
+            src = img.attr('src');
+            for (j = 0 ; j < src.length ; j++){
+                if (src[j] == '0'){
+                    src = src.substr(0, j) + '1' + src.substr(j + 1);
+                    break;
+                }
+            }
+            img.attr('src' , src);
+        }
+    }else{
+        for (i = 0; i < socialMediaCount; i++) {
+            img = $("footer div.socialMedia div.row").children().eq(i).find("img");
+            src = img.attr('src');
+            for (j = 0 ; j < src.length ; j++){
+                if (src[j] == '1'){
+                    src = src.substr(0, j) + '0' + src.substr(j + 1);
+                    break;
+                }
+            }
+            img.attr('src' , src);
+        }
+    }
+
+}
+
+
+
+// social media icons change color
+
+$("footer div.middleFooter div.socialMedia div.row div.col-md-4").hover(function () {
+    var isNight = $("body").hasClass("night");
+    var picture = $(this).find("img");
+    var src = picture.attr("src");
+    var i ;
+
+    if(!isNight){
+        for (i = 0 ; i < src.length ; i++){
+            if (src[i] == '0'){
+                src = src.substr(0, i) + '1' + src.substr(i + 1);
+                break;
+            }
+        }
+        picture.attr('src' , src);
+    }
+
+});
+
+$("footer div.middleFooter div.socialMedia div.row div.col-md-4").mouseleave(function () {
+    var isNight = $("body").hasClass("night");
+    var picture = $(this).find("img");
+    var src = picture.attr("src");
+    var i ;
+
+    if(!isNight){
+        for (i = 0 ; i < src.length ; i++){
+            if (src[i] == '1'){
+                src = src.substr(0, i) + '0' + src.substr(i + 1);
+                break;
+            }
+        }
+        picture.attr('src' , src);
+    }
+
+});
+
 
 
 /*$('div#section2 div.currencies img').on({
