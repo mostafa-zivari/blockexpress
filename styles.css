@@ -51,6 +51,8 @@
 }
 
 
+/* general styles */
+
 *{
     padding: 0;
     margin: 0;
@@ -70,9 +72,15 @@ a:hover{
 }
 
 
-html {
-    /*scroll-behavior: smooth;*/
+.hide {
+    display: none;
 }
+
+
+
+
+
+/* specific styles of web */
 
 div.dots {
     position: fixed;
@@ -110,7 +118,7 @@ div.dots .activePage{
 
 
 .full-height{
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -279,10 +287,33 @@ div#section0 div.slider{
     background: #f0f0f0;
     padding: 5px 5px 0 5px;
     transition: 0.5s;
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
     box-shadow: 0 0 1px #afafaf;
 
 }
+
+div#section0 div.chart {
+    height: fit-content;
+    /* margin-top: 5px; */
+    background-color: #f0f0f0;
+    padding: 5px 5px 0 5px;
+    transition: 0.5s;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 0 1px #afafaf;
+    transition: 0.5s;
+
+}
+
+div#section0 div.chart img{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+
+
+}
+
+
 
 
 div#section0 div.slider div.owl-nav button:focus{
@@ -357,7 +388,7 @@ div#section0 div.slider div.card a h3{
 /* section 1 styles */
 
 div#section1{
-
+    padding-top: 50px;
 }
 
 div#section1 div.slider{
@@ -500,7 +531,7 @@ div#section1 div.showAllNews a:hover{
 /* section 2 */
 
 div#section2{
-
+    padding-top: 49px;
 }
 
 body.night div#section2 img{
@@ -517,7 +548,7 @@ div#section2 div.videos, div#section2 div.podcasts , div#section2 div.infographi
 }
 
 div#section2 div.podcasts , div#section2 div.infographics{
-    margin-top: 15px;
+    margin-top: 8px;
 
 }
 
@@ -601,6 +632,12 @@ div#section2 div.videos div.slider div.card a , div#section2 div.podcasts div.sl
 
 
 /*section 3 */
+
+
+div#section3{
+    padding-top: 40px;
+
+}
 
 div#section3 div.tutorials {
     background-color: #f0f0f0;
@@ -777,7 +814,7 @@ div#section2 div.showAllArticles a:hover{
 /* footer */
 
 footer{
-    /*margin-bottom: 10px;*/
+    margin: 10px 0;
 
 }
 
@@ -855,7 +892,7 @@ footer div.upperFooter div.linkBox img.googleMap{
 
 footer div.middleFooter{
     height: max-content;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 footer div.middleFooter div.letterNews{

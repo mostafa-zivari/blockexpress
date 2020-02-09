@@ -6,77 +6,115 @@ var loading = false;
 var delayInMilliseconds = 1000;
 var lastScrollTop = 0;
 
-
 // show tooltip for dotted
 $('[data-toggle="tooltip"]').tooltip();
 
+setDefaultTemplate();
 
-document.onkeydown = function (event) {
-    switch (event.keyCode) {
-        case 38:
-            // up key pressed
-            if (newRow > 0) {
-                newRow--;
-                scrollPageWithDot();
-            }
-            break;
-        case 40:
-            // down key pressed
-            if (newRow < numberOfRows || newRow == 0) {
-                newRow++;
-                scrollPageWithDot();
-            }
-            break;
+$(window).resize(setResizedSetting);
+$(document).keydown(scrollWithKeyArrow);
+$("div.dots span.dot").click(scrollWithDots);
+$('.toggle').click(toggleMode);
+
+
+
+function setDefaultTemplate() {
+    var height = window.innerHeight;
+
+    if (height < 750) {
+        $("div.dots").addClass("hide");
     }
-};
+}
+
+function setResizedSetting() {
+    var height = window.innerHeight;
+
+    console.log(height);
+    if (height < 750) {
+        $("div.dots").addClass("hide");
+    } else {
+        $("div.dots").removeClass("hide");
+    }
+}
+
+
+function scrollWithKeyArrow() {
+    var height = window.innerHeight;
+
+    var asciiCode = event.keyCode;
+    // 38 = up key and 40 = down key
+
+    if (asciiCode == 38 && height >= 750) {
+        // scroll to up
+        if (newRow > 0) {
+            newRow--;
+            scrollPage();
+        }
+
+    } else if (asciiCode == 40 && height >= 750) {
+        // scroll to down
+        if (newRow < numberOfRows || newRow == 0) {
+            newRow++;
+            scrollPage();
+        }
+
+    }
+}
+
 
 
 window.addEventListener('wheel', function (event) {
-    if (event.deltaY < 0) {
+    var height = window.innerHeight;
+
+    if (event.deltaY < 0 && height >= 750) {
         // scrolling up
         if (newRow > 0) {
             newRow--;
         }
-    } else if (event.deltaY > 0) {
+        scrollPage();
+
+    } else if (event.deltaY > 0 && height >= 750) {
         // scrolling down
 
         if (newRow < row || newRow == 0) {
             newRow++;
         }
+        scrollPage();
+
     }
-
-
-    scrollPageWithDot();
 
 });
 
 
-$("div.dots span.dot").click(function () {
+function scrollWithDots(){
     var id = $(".dot").index(this);
     newRow = id;
 
-    scrollPageWithDot();
-});
+    scrollPage();
+}
 
-
-$('.toggle').click(function () {
+function toggleMode(){
     $('.toggle').toggleClass('active');
     $('body').toggleClass('night');
 
     changeColorOfMenuIcon();
     changeColorOfCurrencies();
     changeColorOfSocialMedia();
-});
+    changeColorOfChart();
+}
+
+
+// sliders
 
 $("div#section0 .slider").owlCarousel({
-    nav:true,
-    dots:false,
+    nav: false,
+    dots: false,
     loop: true,
     margin: 10,
     rtl: true,
-    autoplay:true,
-    autoplayTimeout:2000,
-    autoplayHoverPause:true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
 
     responsive: {
         0: {
@@ -183,11 +221,13 @@ $("div#section2 div.podcasts div.slider").owlCarousel({
 
 function setNewRow(number) {
     newRow = number;
-    scrollPageWithDot();
+    scrollPage();
 }
 
-function scrollPageWithDot() {
+function scrollPage() {
     var element = "#section" + newRow;
+    var height = window.innerHeight;
+
 
     $('div.dots span.dot').eq(row).removeClass("activePage");
     $('div.dots span.dot').eq(newRow).addClass("activePage");
@@ -224,7 +264,6 @@ function scrollPageWithDot() {
 }
 
 // change image of currencies
-
 
 $("div#section3 div.currencies div.currency").hover(function () {
     var isNight = $("body").hasClass("night");
@@ -272,34 +311,61 @@ $("div#section3 div.currencies div.currency").mouseleave(function () {
 });
 
 
+function changeColorOfChart() {
+    var isNight = $("body").hasClass("night");
+    var picture = $("div#section0 div.chart img");
+    var j, source;
+    source = picture.attr('src');
+    if (isNight) {
+
+        for (j = 0; j < source.length; j++) {
+            if (source[j] == '0') {
+                source = source.substr(0, j) + '1' + source.substr(j + 1);
+                break;
+            }
+        }
+        picture.attr('src', source);
+
+    } else {
+        for (j = 0; j < source.length; j++) {
+            if (source[j] == '1') {
+                source = source.substr(0, j) + '0' + source.substr(j + 1);
+                break;
+            }
+        }
+        picture.attr('src', source);
+    }
+
+}
+
 function changeColorOfMenuIcon() {
     var isNight = $("body").hasClass("night");
     var menuCount = $("div.menu nav ul").children().length;
-    var i , j , icon , source;
+    var i, j, icon, source;
 
     if (isNight) {
         for (i = 0; i < menuCount; i++) {
             icon = $("div.menu nav ul").children().eq(i).find("img");
             source = icon.attr('src');
-            for (j = 0 ; j < source.length ; j++){
-                if (source[j] == '0'){
+            for (j = 0; j < source.length; j++) {
+                if (source[j] == '0') {
                     source = source.substr(0, j) + '1' + source.substr(j + 1);
                     break;
                 }
             }
-            icon.attr('src' , source);
+            icon.attr('src', source);
         }
-    }else{
+    } else {
         for (i = 0; i < menuCount; i++) {
             icon = $("div.menu nav ul").children().eq(i).find("img");
             source = icon.attr('src');
-            for (j = 0 ; j < source.length ; j++){
-                if (source[j] == '1'){
+            for (j = 0; j < source.length; j++) {
+                if (source[j] == '1') {
                     source = source.substr(0, j) + '0' + source.substr(j + 1);
                     break;
                 }
             }
-            icon.attr('src' , source);
+            icon.attr('src', source);
         }
     }
 

@@ -34,6 +34,11 @@ body.night div#section0 div.slider , body.night div#section1 div.slider{
     background-color: #343434;
 }
 
+body.night div#section0 div.chart {
+    background-color: #343434;
+
+}
+
 body.night div#section0 div.slider div.card img , body.night div#section1 div.slider div.card img{
     filter: brightness(80%);
 }
