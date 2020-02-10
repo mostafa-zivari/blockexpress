@@ -5,11 +5,15 @@ var loading = false;
 var delayInMilliseconds = 700;
 var documentHeight;
 
+
+
+
 // show tooltip for dotted
 $('[data-toggle="tooltip"]').tooltip();
 
 var windowHeight, menuDistance;
 var distances = new Array();
+
 
 
 $(window).resize(setResizedSetting);
@@ -22,6 +26,7 @@ $(document).ready(function () {
 });
 
 
+<<<<<<< HEAD
 $(window).scroll(function () {
 
     var scroll = $(document).scrollTop();
@@ -93,13 +98,26 @@ function setDistances() {
 
     for (i = 0; i < numberOfRows + 1; i++) {
         console.log(distances[i]);
+=======
+
+function setDefaultTemplate() {
+    var height = window.innerHeight;
+
+    if (height < 745) {
+        $("div.dots").addClass("hide");
+>>>>>>> master
     }
 }
 
 function setResizedSetting() {
     var height = window.innerHeight;
+<<<<<<< HEAD
 
     if (height < 750) {
+=======
+    console.log(height);
+    if (height < 745) {
+>>>>>>> master
         $("div.dots").addClass("hide");
     } else {
         $("div.dots").removeClass("hide");
@@ -125,14 +143,14 @@ function scrollWithKeyArrow() {
     var asciiCode = event.keyCode;
     // 38 = up key and 40 = down key
 
-    if (asciiCode == 38 && height >= 750) {
+    if (asciiCode == 38 && height >= 745) {
         // scroll to up
         if (newRow > 0) {
             newRow--;
             scrollPage();
         }
 
-    } else if (asciiCode == 40 && height >= 750) {
+    } else if (asciiCode == 40 && height >= 745) {
         // scroll to down
         if (newRow < numberOfRows || newRow == 0) {
             newRow++;
@@ -146,14 +164,14 @@ function scrollWithKeyArrow() {
 window.addEventListener('wheel', function (event) {
     var height = window.innerHeight;
 
-    if (event.deltaY < 0 && height >= 750) {
+    if (event.deltaY < 0 && height >= 745) {
         // scrolling up
         if (newRow > 0) {
             newRow--;
         }
         scrollPage();
 
-    } else if (event.deltaY > 0 && height >= 750) {
+    } else if (event.deltaY > 0 && height >= 745) {
         // scrolling down
 
         if (newRow < row || newRow == 0) {
@@ -251,7 +269,7 @@ $("div#section2 div.videos div.slider").owlCarousel({
             autoplay: false
         },
         1000: {
-            items: 4
+            items: 6
         }
     }
 });
@@ -293,7 +311,7 @@ $("div#section2 div.podcasts div.slider").owlCarousel({
             autoplay: false
         },
         1000: {
-            items: 4
+            items: 6
         }
     }
 });
