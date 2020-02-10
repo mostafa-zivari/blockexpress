@@ -1,10 +1,9 @@
-var scrolled = 0;
 var row = 0;
 var newRow = 0;
 const numberOfRows = 4;
 var loading = false;
-var delayInMilliseconds = 1000;
-var lastScrollTop = 0;
+var delayInMilliseconds = 700;
+var documentHeight;
 
 // show tooltip for dotted
 $('[data-toggle="tooltip"]').tooltip();
@@ -26,6 +25,7 @@ $(document).ready(function () {
 $(window).scroll(function () {
 
     var scroll = $(document).scrollTop();
+    console.log(scroll);
     var i;
 
     if (scroll >= menuDistance) {
@@ -36,36 +36,50 @@ $(window).scroll(function () {
         $("div.menu.topMenu").addClass("hideMenu");
     }
 
-    for (i = 0 ; i <= numberOfRows ; i++){
-        if (scroll >= distances[i] - 25){
-            newRow = i;
-            break;
+    if (scroll + 150 >= distances[numberOfRows]){
+        newRow = numberOfRows;
+    }else {
+        for (i = numberOfRows; i >= 0; i--) {
+            if (scroll >= (distances[i] - 35)) {
+                newRow = i;
+                break;
+            }
         }
     }
 
-    if ($("div.menu.topMenu ul").children().eq(row).hasClass("activeLink")){
-        $("div.menu.topMenu ul").children().eq(newRow).addClass("activeLink");
-        $("div.menu.topMenu ul").children().eq(row).removeClass("activeLink");
+    if (newRow == 0){
+        $(".topMenu").addClass("hideMenu");
+        $(".bottomMenu").removeClass("hideMenu");
+    }else{
+        $(".bottomMenu").addClass("hideMenu");
+        $(".topMenu").removeClass("hideMenu");
     }
+
+    for (i = 0; i <= numberOfRows; i++) {
+        $("div.menu.topMenu ul").children().eq(i).removeClass("activeLink");
+    }
+    $("div.menu.topMenu ul").children().eq(newRow).addClass("activeLink");
 
 
     if (windowHeight >= 750) {
-        $('div.dots span.dot').eq(row).removeClass("activePage");
-        $('div.dots span.dot').eq(newRow).addClass("activePage");
-    }
-    console.log("row:" + row);
-    console.log("new row:" + newRow);
-    row = newRow;
 
-});
+        for (i = 0; i <= numberOfRows; i++) {
+            $("div.dots span.dot").eq(i).removeClass("activePage");
+        }
+        $("div.dots span.dot").eq(newRow).addClass("activePage");
+    }
+
+
+})
+;
 
 
 function setDistances() {
     windowHeight = window.innerHeight;
     menuDistance = $("div.bottomMenu").position().top;
     menuDistance = Math.round(menuDistance);
-
-
+    documentHeight = $(document).outerHeight() ;
+    console.log(documentHeight);
     var i, distance = 0;
 
     for (i = 0; i < numberOfRows + 1; i++) {
@@ -292,6 +306,8 @@ function setNewRow(number) {
 
 function scrollPage() {
     var element = "#section" + newRow;
+    var i;
+    var height = window.innerHeight;
 
     if (newRow > 0) {
         setTimeout(function () {
@@ -315,7 +331,6 @@ function scrollPage() {
         }, delayInMilliseconds + 100);
 
     }
-
 
     //row = newRow;
 }
