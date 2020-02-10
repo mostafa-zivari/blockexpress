@@ -26,7 +26,7 @@ $(document).ready(function () {
 });
 
 
-<<<<<<< HEAD
+
 $(window).scroll(function () {
 
     var scroll = $(document).scrollTop();
@@ -98,26 +98,25 @@ function setDistances() {
 
     for (i = 0; i < numberOfRows + 1; i++) {
         console.log(distances[i]);
-=======
+
 
 function setDefaultTemplate() {
     var height = window.innerHeight;
 
     if (height < 745) {
         $("div.dots").addClass("hide");
->>>>>>> master
     }
 }
 
 function setResizedSetting() {
     var height = window.innerHeight;
-<<<<<<< HEAD
+
 
     if (height < 750) {
-=======
+
     console.log(height);
     if (height < 745) {
->>>>>>> master
+
         $("div.dots").addClass("hide");
     } else {
         $("div.dots").removeClass("hide");
