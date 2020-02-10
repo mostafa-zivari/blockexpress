@@ -174,7 +174,7 @@ $("div#section2 div.videos div.slider").owlCarousel({
             autoplay: false
         },
         1000: {
-            items: 4
+            items: 6
         }
     }
 });
@@ -216,7 +216,7 @@ $("div#section2 div.podcasts div.slider").owlCarousel({
             autoplay: false
         },
         1000: {
-            items: 4
+            items: 6
         }
     }
 });
