@@ -6,10 +6,14 @@ var loading = false;
 var delayInMilliseconds = 1000;
 var lastScrollTop = 0;
 
+
+
+
 // show tooltip for dotted
 $('[data-toggle="tooltip"]').tooltip();
 
 setDefaultTemplate();
+
 
 $(window).resize(setResizedSetting);
 $(document).keydown(scrollWithKeyArrow);
@@ -18,19 +22,19 @@ $('.toggle').click(toggleMode);
 
 
 
+
 function setDefaultTemplate() {
     var height = window.innerHeight;
 
-    if (height < 750) {
+    if (height < 745) {
         $("div.dots").addClass("hide");
     }
 }
 
 function setResizedSetting() {
     var height = window.innerHeight;
-
     console.log(height);
-    if (height < 750) {
+    if (height < 745) {
         $("div.dots").addClass("hide");
     } else {
         $("div.dots").removeClass("hide");
@@ -44,14 +48,14 @@ function scrollWithKeyArrow() {
     var asciiCode = event.keyCode;
     // 38 = up key and 40 = down key
 
-    if (asciiCode == 38 && height >= 750) {
+    if (asciiCode == 38 && height >= 745) {
         // scroll to up
         if (newRow > 0) {
             newRow--;
             scrollPage();
         }
 
-    } else if (asciiCode == 40 && height >= 750) {
+    } else if (asciiCode == 40 && height >= 745) {
         // scroll to down
         if (newRow < numberOfRows || newRow == 0) {
             newRow++;
@@ -62,18 +66,17 @@ function scrollWithKeyArrow() {
 }
 
 
-
 window.addEventListener('wheel', function (event) {
     var height = window.innerHeight;
 
-    if (event.deltaY < 0 && height >= 750) {
+    if (event.deltaY < 0 && height >= 745) {
         // scrolling up
         if (newRow > 0) {
             newRow--;
         }
         scrollPage();
 
-    } else if (event.deltaY > 0 && height >= 750) {
+    } else if (event.deltaY > 0 && height >= 745) {
         // scrolling down
 
         if (newRow < row || newRow == 0) {
@@ -86,14 +89,14 @@ window.addEventListener('wheel', function (event) {
 });
 
 
-function scrollWithDots(){
+function scrollWithDots() {
     var id = $(".dot").index(this);
     newRow = id;
 
     scrollPage();
 }
 
-function toggleMode(){
+function toggleMode() {
     $('.toggle').toggleClass('active');
     $('body').toggleClass('night');
 
