@@ -9,14 +9,90 @@ var lastScrollTop = 0;
 // show tooltip for dotted
 $('[data-toggle="tooltip"]').tooltip();
 
-setDefaultTemplate();
+var windowHeight, menuDistance;
+var distances = new Array();
+
 
 $(window).resize(setResizedSetting);
 $(document).keydown(scrollWithKeyArrow);
 $("div.dots span.dot").click(scrollWithDots);
 $('.toggle').click(toggleMode);
 
+$(document).ready(function () {
+    setDefaultTemplate();
+});
 
+
+$(window).scroll(function () {
+
+    var scroll = $(document).scrollTop();
+    var i;
+
+    if (scroll >= menuDistance) {
+        $("div.menu.bottomMenu").addClass("hideMenu");
+        $("div.menu.topMenu").removeClass("hideMenu");
+    } else {
+        $("div.menu.bottomMenu").removeClass("hideMenu");
+        $("div.menu.topMenu").addClass("hideMenu");
+    }
+
+    for (i = 0 ; i <= numberOfRows ; i++){
+        if (scroll >= distances[i] - 25){
+            newRow = i;
+            break;
+        }
+    }
+
+    if ($("div.menu.topMenu ul").children().eq(row).hasClass("activeLink")){
+        $("div.menu.topMenu ul").children().eq(newRow).addClass("activeLink");
+        $("div.menu.topMenu ul").children().eq(row).removeClass("activeLink");
+    }
+
+
+    if (windowHeight >= 750) {
+        $('div.dots span.dot').eq(row).removeClass("activePage");
+        $('div.dots span.dot').eq(newRow).addClass("activePage");
+    }
+    console.log("row:" + row);
+    console.log("new row:" + newRow);
+    row = newRow;
+
+});
+
+
+function setDistances() {
+    windowHeight = window.innerHeight;
+    menuDistance = $("div.bottomMenu").position().top;
+    menuDistance = Math.round(menuDistance);
+
+
+    var i, distance = 0;
+
+    for (i = 0; i < numberOfRows + 1; i++) {
+
+        distances[i] = distance;
+
+        distance += $("#section" + i).outerHeight(true);
+        // distance = Math.round(distance);
+
+    }
+
+    for (i = 0; i < numberOfRows + 1; i++) {
+        console.log(distances[i]);
+    }
+}
+
+function setResizedSetting() {
+    var height = window.innerHeight;
+
+    if (height < 750) {
+        $("div.dots").addClass("hide");
+    } else {
+        $("div.dots").removeClass("hide");
+    }
+
+    setDistances();
+}
 
 function setDefaultTemplate() {
     var height = window.innerHeight;
@@ -24,17 +100,8 @@ function setDefaultTemplate() {
     if (height < 750) {
         $("div.dots").addClass("hide");
     }
-}
 
-function setResizedSetting() {
-    var height = window.innerHeight;
-
-    console.log(height);
-    if (height < 750) {
-        $("div.dots").addClass("hide");
-    } else {
-        $("div.dots").removeClass("hide");
-    }
+    setDistances();
 }
 
 
@@ -62,7 +129,6 @@ function scrollWithKeyArrow() {
 }
 
 
-
 window.addEventListener('wheel', function (event) {
     var height = window.innerHeight;
 
@@ -86,14 +152,14 @@ window.addEventListener('wheel', function (event) {
 });
 
 
-function scrollWithDots(){
+function scrollWithDots() {
     var id = $(".dot").index(this);
     newRow = id;
 
     scrollPage();
 }
 
-function toggleMode(){
+function toggleMode() {
     $('.toggle').toggleClass('active');
     $('body').toggleClass('night');
 
@@ -226,11 +292,6 @@ function setNewRow(number) {
 
 function scrollPage() {
     var element = "#section" + newRow;
-    var height = window.innerHeight;
-
-
-    $('div.dots span.dot').eq(row).removeClass("activePage");
-    $('div.dots span.dot').eq(newRow).addClass("activePage");
 
     if (newRow > 0) {
         setTimeout(function () {
@@ -241,10 +302,6 @@ function scrollPage() {
         $(".topMenu").addClass("hideMenu");
         $(".bottomMenu").removeClass("hideMenu");
     }
-
-
-    $("div.topMenu li").eq(row).removeClass("activeLink");
-    $("div.topMenu li").eq(newRow).addClass("activeLink");
 
 
     if (!loading) {
@@ -260,7 +317,7 @@ function scrollPage() {
     }
 
 
-    row = newRow;
+    //row = newRow;
 }
 
 // change image of currencies
